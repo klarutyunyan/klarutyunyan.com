@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SiGithub, SiLinkedin, SiCredly, SiX, SiInstagram, SiYoutube, SiSpotify } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiCredly, SiX, SiInstagram, SiApplemusic, SiYoutube } from "react-icons/si";
 
 export default function Contact() {
   const [subject, setSubject] = useState("");
@@ -19,8 +19,8 @@ export default function Contact() {
     { name: "Credly", icon: SiCredly, url: "https://www.credly.com/users/klarutyunyan" },
     { name: "X", icon: SiX, url: "http://x.com/klarutyunyan" },
     { name: "Instagram", icon: SiInstagram, url: "https://instagram.com/klarutyunyan" },
+    { name: "Apple Music", icon: SiApplemusic, url: "https://music.apple.com/profile/klarutyunyan" },
     { name: "Youtube", icon: SiYoutube, url: "https://www.youtube.com/@klarutyunyan" },
-    { name: "Spotify", icon: SiSpotify, url: "https://open.spotify.com/user/316px3bhlzecawgsoddy4hy5eddu" },
 
   ];
 
