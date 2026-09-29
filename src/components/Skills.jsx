@@ -2,7 +2,7 @@ import {
   SiAmazonwebservices, SiApachejmeter, SiApachekafka, SiApachemaven, SiApple,
   SiCucumber, SiCypress, SiDocker, SiGithub, SiGitlab, SiGrafana, SiGradle,
   SiInsomnia, SiJenkins, SiJira, SiJavascript, SiJunit5, SiKotlin, SiKubernetes,
-  SiLinux, SiPostgresql, SiPrometheus, SiSelenium, SiStorybook, SiSwagger
+  SiLinux, SiOpenai, SiPostgresql, SiSelenium, SiStorybook, SiSwagger
 
 } from "react-icons/si";
 
@@ -17,6 +17,7 @@ export default function Skills() {
     { name: "AWS", icon: SiAmazonwebservices },
     { name: "Apache JMeter", icon: SiApachejmeter },
     { name: "Apache Kafka", icon: SiApachekafka },
+    { name: "Codex", icon: SiOpenai },
     { name: "Cypress", icon: SiCypress },
     { name: "Cucumber", icon: SiCucumber },
     { name: "Docker", icon: SiDocker },
@@ -37,7 +38,6 @@ export default function Skills() {
     { name: "Maven", icon: SiApachemaven },
     { name: "Playwright", icon: PlaywrightIcon },
     { name: "PostgreSQL", icon: SiPostgresql },
-    { name: "Prometheus", icon: SiPrometheus },
     { name: "REST-assured", icon: RestAssuredIcon },
     { name: "Selenium WebDriver", icon: SiSelenium },
     { name: "Storybook", icon: SiStorybook },

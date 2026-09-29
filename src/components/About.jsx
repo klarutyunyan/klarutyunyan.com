@@ -12,7 +12,7 @@ export default function About() {
           <p className="text-xl min-h-[13rem] leading-relaxed text-gray-800 dark:text-gray-200">
             <ReactTyped
               strings={[
-                "Professional Software Quality Assurance Automation Engineer with 8 years experience and proven track record in designing, developing, and executing automated test suites.",
+                "Professional Software Quality Assurance Automation Engineer with 9 years experience and proven track record in designing, developing, and executing automated test suites.",
               ]}
               typeSpeed={50}
               backSpeed={30}
