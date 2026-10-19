@@ -1,5 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap");
 @import "tailwindcss";
 
-body {
-  @apply bg-gray-50 text-gray-900 font-sans;
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #151512;
+  background: #f3f0e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --paper: #f3f0e8;
+  --ink: #151512;
+  --muted: #69675f;
+  --line: #cbc7bb;
+  --blue: #2042b8;
+  --accent-surface: #2042b8;
+  --orange: #f0642d;
+  --card: #e9e5da;
+  --header-height: 72px;
+}
+
+:root[data-theme="dark"] {
+  color: #efede5;
+  background: #161716;
+  --paper: #161716;
+  --ink: #efede5;
+  --muted: #a5a49e;
+  --line: #3a3b37;
+  --blue: #9bb2ff;
+  --orange: #ff7545;
+  --card: #20211f;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--paper); }
+button, a { font: inherit; }
+a { color: inherit; }
+button { color: inherit; }
+::selection { color: white; background: var(--accent-surface); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
