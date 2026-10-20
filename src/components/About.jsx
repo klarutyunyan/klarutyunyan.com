@@ -27,7 +27,7 @@ export default function About() {
       </div>
       <div className="proof-strip">
         <div><strong>9+</strong><span>Years building<br />quality systems</span></div>
-        <div><strong>06</strong><span>Core areas of<br />expertise</span></div>
+        <div><strong>6</strong><span>Core areas of<br />expertise</span></div>
         <div><strong>30+</strong><span>Tools across the<br />delivery stack</span></div>
         <p>FOUNDATIONS · API · UI · CI/CD · PERFORMANCE · MOBILE</p>
       </div>
