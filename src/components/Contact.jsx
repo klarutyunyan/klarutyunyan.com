@@ -38,7 +38,9 @@ export default function Contact() {
       <ul className="social-links">
         {contacts.map(([name, icon, url]) => (
           <li key={name}>
-            <a href={url} target="_blank" rel="noopener noreferrer">{icon}<span>{name}</span></a>
+            <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name} title={name}>
+              <span aria-hidden="true">{icon}</span>
+            </a>
           </li>
         ))}
       </ul>

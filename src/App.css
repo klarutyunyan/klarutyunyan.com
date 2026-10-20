@@ -1,4 +1,4 @@
-.site-shell { min-height: 100vh; overflow: clip; background: var(--paper); transition: background .25s, color .25s; }
+.site-shell { min-height: 100vh; background: var(--paper); transition: background .25s, color .25s; }
 .site-header { position: sticky; top: 0; z-index: 100; height: var(--header-height); background: var(--paper); border-bottom: 1px solid var(--line); transition: background .25s, color .25s; }
 .site-header-inner { width: min(100% - 48px, 1440px); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; }
 .wordmark { font-family: "DM Mono", monospace; font-weight: 500; text-decoration: none; letter-spacing: -.06em; }
@@ -51,17 +51,19 @@ h1 em, h2 em { color: var(--accent-surface); font-family: "Newsreader", serif; f
 .expertise-card li { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 99px; font-size: 11px; white-space: nowrap; }
 .expertise-card li svg { width: 15px; height: 15px; color: var(--accent-surface); fill: currentColor; }
 
-.contact { width: 100%; max-width: none; padding-left: max(24px, calc((100vw - 1440px) / 2)); padding-right: max(24px, calc((100vw - 1440px) / 2)); color: #f6f3eb; background: var(--accent-surface); }
+.contact { width: 100%; max-width: none; padding-left: max(24px, calc((100% - 1440px) / 2)); padding-right: max(24px, calc((100% - 1440px) / 2)); color: #f6f3eb; background: var(--accent-surface); }
 .eyebrow-light span { background: #ff8b5c; }
 .contact-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 9vw; align-items: end; }
 .contact h2 em { color: #f6f3eb; }
 .contact-details > p { margin: 0 0 32px; color: #dce2ff; font-size: 15px; line-height: 1.7; }
 .button-light { color: var(--accent-surface); background: #f6f3eb; }
 .copy-email { display: flex; align-items: center; gap: 9px; margin-top: 22px; padding: 0; border: 0; color: #dce2ff; background: none; font-family: "DM Mono", monospace; font-size: 10px; cursor: pointer; }
-.social-links { display: grid; grid-template-columns: repeat(7, 1fr); margin: 110px 0 0; padding: 0; border-top: 1px solid rgba(255,255,255,.3); border-bottom: 1px solid rgba(255,255,255,.3); list-style: none; }
-.social-links li + li { border-left: 1px solid rgba(255,255,255,.3); }
-.social-links a { display: flex; align-items: center; justify-content: center; gap: 9px; padding: 20px 8px; font-size: 11px; text-decoration: none; transition: color .2s, background .2s; }
-.social-links a:hover { color: var(--accent-surface); background: #f6f3eb; }
+.social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 24px; margin: 110px 0 0; padding: 0; list-style: none; }
+.social-links a { display: grid; place-items: center; width: 48px; height: 48px; color: #f6f3eb; text-decoration: none; transition: transform .2s; }
+.social-links a span { display: flex; }
+.social-links svg { width: 32px; height: 32px; }
+.social-links a:hover { transform: translateY(-4px); }
+.social-links a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 8px; }
 
 footer { width: min(100% - 48px, 1440px); min-height: 110px; margin: auto; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 11px; text-align: center; }
 
@@ -116,8 +118,6 @@ footer { width: min(100% - 48px, 1440px); min-height: 110px; margin: auto; displ
   .section-heading > p:last-child { grid-column: 2; }
   .expertise-card { grid-template-columns: 50px 1fr; }
   .expertise-card ul { grid-column: 2; }
-  .social-links { grid-template-columns: repeat(4, 1fr); }
-  .social-links li { border: 1px solid rgba(255,255,255,.3); margin: -1px 0 0 -1px; }
 }
 
 @media (max-width: 700px) {
@@ -142,6 +142,8 @@ footer { width: min(100% - 48px, 1440px); min-height: 110px; margin: auto; displ
   .expertise-card:hover { padding-left: 0; padding-right: 0; background: transparent; }
   .contact { width: 100%; padding-left: 16px; padding-right: 16px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .social-links { grid-template-columns: repeat(2, 1fr); margin-top: 70px; }
+  .social-links { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; width: 100%; max-width: 392px; margin: 70px auto 0; }
+  .social-links a { width: 100%; max-width: 44px; height: 44px; justify-self: center; }
+  .social-links svg { width: 28px; height: 28px; }
   footer { width: calc(100% - 32px); }
 }
